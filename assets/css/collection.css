@@ -1,0 +1,73 @@
+.collections {
+  width: 100%;
+  height: calc(100vh - 40vh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.collection-card {
+  transition: all 0.3s ease-in-out;
+  width: 350px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.collection-card:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: var(--primary);
+}
+
+.collection-card:hover .collection-icon {
+  transition: all 0.3s ease-in-out;
+  filter: brightness(100);
+}
+
+.collection-card:hover .collection-label {
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+}
+
+.collection-icon {
+  transition: all 0.3s ease-in-out;
+  margin-top: -30px;
+  width: 200px;
+  height: auto;
+  filter: brightness();
+}
+
+.collection-label {
+  transition: all 0.3s ease-in-out; 
+  margin-top: -20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--primary);
+  font-family: 'rubik';
+}
+
+/* Disable */
+.collection-card.disable {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.collection-card.disable:hover {
+  background-color: var(--bg-secondary);
+}
+
+.collection-card.disable:hover .collection-icon {
+  filter: none;
+}
+
+.collection-card.disable:hover .collection-label {
+  color: var(--primary);
+}
